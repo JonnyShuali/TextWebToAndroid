@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CompSMS</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="Welcome">ברוך הבא</string>
+    <string name="Welcome_info">באמצעות האפליקציה הבאה תוכלו לאפשר שליחת הודעות טקסט דרך המחשב. אך לפני כן, עליכם לבצע הרשמה קצרה. אל דאגה, זוהי הרשמה חד פעמית :)</string>
+    <string name="Swipe">החלק להמשך</string>
+    <string name="stepTwo">שלב 2</string>
+    <string name="register">הרשם</string>
+    <string name="googleAccConnected">חשבון גוגל מחובר</string>
+    <string name="email">דואר אלקטרוני</string>
+    <string name="password">סיסמא</string>
+    <string name="registerd_info">נראה מכאן שאתה כבר רשום, הכל בסדר?</string>
+    <string name="error">שגיאה</string>
+    <string name="InstallGoogleAccount">אנא התקן חשבון גוגל</string>
+    <string name="registering">מבצע תהליך הרשמה</string>
+    <string name="url">עכשיו רק נשאר לך להכנס לאתר http://cs.vod.mx</string>
+
+</resources>

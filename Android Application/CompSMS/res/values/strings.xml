@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CompSMS</string>
+    <string name="Welcome">Welcome</string>
+    <string name="Welcome_info">This app provide you a way to send SMS via a easy website. To do that, please register first</string>
+    <string name="Swipe">Swipe to continue</string>
+    <string name="stepTwo">Step 2</string>
+    <string name="register">Register</string>
+    <string name="googleAccConnected">Google Acoount connected</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="error">ERROR</string>
+    <string name="registerd_info">Looks like youre already regitred, everything allright?</string>
+    <string name="InstallGoogleAccount">Please add Google Acoount to your device</string>
+    <string name="registering">Registering</string>
+    <string name="url">Now just get in our website and enjoy :)</string>
+
+</resources>
