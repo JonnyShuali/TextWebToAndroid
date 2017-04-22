@@ -1,7 +1,6 @@
 package register;
 
 import java.io.IOException;
-
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.roy.compsms.MainActivity;
 import com.roy.compsms.R;
@@ -9,6 +8,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
+
 //Class which register the device into GCM servers
 //Returns RegID string
 // Registers the application with GCM servers asynchronously.

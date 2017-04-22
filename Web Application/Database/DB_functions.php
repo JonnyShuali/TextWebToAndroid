@@ -1,8 +1,8 @@
 <?php
 
 /**
- * פעולות במסד
- */
+ * DB function
+ **/
 require 'DB_Connect.php';
 class DB_functions {
 
@@ -12,9 +12,10 @@ class DB_functions {
         
         $this->db = new DB_Connect;
     }
+
 /**
- * מכניסה משתמש חדש למסד
- * מחזירה אמת או שקר לפי הצלחה
+ * Insert new user to db
+ * Returns true on sucsess or false on error
  */
     public function StoreNewUser($email, $reg_id,$pass) {
         $stmt = $this->db->prepare("INSERT INTO users(name, gcm_regid, pass) VALUES (? , ?, ?)");
@@ -25,12 +26,12 @@ class DB_functions {
             return false;
         return true;
     }
+
     /**
-     * מחפשת את המזהה של המשתמש במסד לפי שם
-     * במידה ולא מצאה מחזירה שקר
+     * Lookup the user in db by name
+     * Return user datails or sucsess or false on exception
      */
     public function GetUser($name,$pass) {
- //       $result=NULL;
         $stmt = $this->db->prepare("SELECT gcm_regid FROM users WHERE name=? AND pass=?");
         $stmt -> bind_param("ss", $name, $pass);
         $stmt->execute();
@@ -41,8 +42,9 @@ class DB_functions {
             return $result;
         return false;
     }
+
         /**
-         * מחיקת משתמש מהמסד
+         * Deletes user from the db
          */ 
     public function DeleteUser($name) {
         $stmt = $this->db->prepare("DELETE FROM users WHERE name=?");

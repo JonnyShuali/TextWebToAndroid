@@ -5,22 +5,26 @@ include_once '../config.php';
 
 if (isset($_POST["email"]) && isset($_POST["regId"]) && isset($_POST["salt"]) &&isset($_POST["password"]) )
     {
-    //השמת ערכי שנשלחו במשתנים
+    // Var declaration 
     $email=$_POST["email"];
     $regId=$_POST["regId"];
     $salt=$_POST["salt"];
     $pass=$_POST["password"];
-    //בדיקת salt
+
+    // Salt checking
     if(SALT!=$salt)
         die("salt error");
-    //מאתחל
+
+    // Init DB function
     $db=new DB_functions();
-    //מוחק משתמשים קודמים עם אותו אימייל אם יש
+
+    // Delete previousy used user with the same email
     $db->DeleteUser($email);
-    //מכניס פרטים למסד
+
+    // Adding the new user
     $db->StoreNewUser($email, $regId,$pass);
     }
     else {
-        echo 'error';    
+        die('error');
     }
     ?>

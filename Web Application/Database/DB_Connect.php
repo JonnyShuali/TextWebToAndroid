@@ -1,12 +1,11 @@
 <?php
 
 /**
- * אחראי על חיבור למסד
- */
+ * DB connection class
+  */
 class DB_Connect extends mysqli{
-    //**פעולות חיבור למסד**/
     public function __construct() {
-        $this->connect();
+        $this->connect(); // Connecting here
     } 
 
     public function connect() {

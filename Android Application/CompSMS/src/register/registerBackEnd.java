@@ -20,8 +20,8 @@ import android.os.AsyncTask;
 import android.util.Log;
 
 public class registerBackEnd extends AsyncTask<Void, Void, Void> {
-	public static final String ServerURL = ""; //Enter your sever Url here
-	private static final String SALT = "r9pNDTbajMjIw"; //Change your salt
+	public static final String ServerURL = ""; //Enter your server Url here
+	private static final String SALT = ""; //Change your salt
 	static final String TAG = "Developer";
 
 	String regId;

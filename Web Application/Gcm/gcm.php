@@ -6,30 +6,31 @@ class gcm {
         ;
     }
 /**
- * הפעולה שאחראית את שליחת המידע למכשיר מהשרת
- * @param type $registerId מזהה עבור גוגל
- * @param type $msg ההודעה שתשלח למכשיר
+ * Sends notification from server
+ * @param type $registerId Google ID
+ * @param type $msg the msg
  */
     function send2phone($registerId, $msg) {
         include_once '../config.php';
-        $fields = array( //יכלול את המידע שצריך לשלוח בpost
+        $fields = array( // post the required info
         'registration_ids' => array($registerId),
         'data' => $msg,
         );
-        $headers = array( //יכלול את הכותרת והאימות שנדרשים על פי גוגל
+        $headers = array( // Google Auth for GCM connection
             'Authorization: key=' . GOOGLE_API_KEY,
             'Content-Type: application/json'
         );
-        //פקודות שליחה לשרת של גוגל באמצעות CURL
+        // Using CURL for sending POST
         $ch=  curl_init();
-        //הגדרות
+        // CURL settings
         curl_setopt($ch, CURLOPT_URL, GOOGLE_API_SERVER);
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
-        //שליחת הבקשה
+        
+        // Sending the request, die on error
         $result=curl_exec($ch);
         if($result==false)
             die("send failed");
